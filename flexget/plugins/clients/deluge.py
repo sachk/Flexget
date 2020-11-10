@@ -486,7 +486,6 @@ class OutputDeluge(DelugePlugin):
         # If download plugin is enabled, it will handle cleanup.
         if 'download' not in task.config:
             download = plugin.get('download', self)
-            download.cleanup_temp_files(task)
 
     def on_task_abort(self, task, config):
         """Make sure normal cleanup tasks still happen on abort."""
