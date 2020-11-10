@@ -173,6 +173,7 @@ class InputDeluge(DelugePlugin):
                     if not torrent_path.startswith('/'):
                         torrent_path = '/' + torrent_path
                     entry['url'] = 'file://' + torrent_path
+                    entry['file'] = torrent_path
                 else:
                     logger.warning('Did not find torrent file at {}', torrent_path)
             for key, value in torrent_dict.items():
